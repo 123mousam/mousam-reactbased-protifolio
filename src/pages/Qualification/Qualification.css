@@ -1,0 +1,220 @@
+/* ============================= */
+/* Background animation keyframes */
+/* ============================= */
+@keyframes moveCells {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 500px 500px, 500px 500px;
+  }
+}
+
+/* ============================= */
+/* Qualification Section */
+/* ============================= */
+.qualification-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  /* Deep Midnight Blue Base */
+  background-color: #020617;
+
+  /* Subtle Cyan/Blue Grid Lines */
+  background-image:
+    linear-gradient(to right, rgba(0, 163, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 163, 255, 0.03) 1px, transparent 1px);
+
+  background-size: 5px 5px;
+
+  /* Cinematic motion */
+  animation: moveCells 60s linear infinite;
+}
+
+/* ============================= */
+/* Glass Container */
+/* ============================= */
+.qualification-container {
+  max-width: 850px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 18px;
+
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 0 30px rgba(0, 163, 255, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.qualification-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 45px rgba(0, 163, 255, 0.45);
+}
+
+/* ============================= */
+/* Section Heading */
+/* ============================= */
+.qualification-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+  color: #00a3ff;
+  text-shadow: 0 0 10px rgba(0, 163, 255, 0.6);
+}
+
+/* ============================= */
+/* Timeline Layout */
+/* ============================= */
+.qualification-list {
+  list-style: none;
+  padding-left: 35px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+
+/* Vertical glowing line */
+.qualification-list::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 163, 255, 0.15),
+    rgba(0, 255, 255, 0.7),
+    rgba(0, 163, 255, 0.15)
+  );
+}
+
+/* ============================= */
+/* Qualification Card */
+/* ============================= */
+.qualification-item {
+  position: relative;
+  padding: 25px 25px 25px 35px;
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.45);
+
+  border-left: 4px solid #00a3ff;
+  box-shadow: 0 0 15px rgba(0, 163, 255, 0.12);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* Timeline dot */
+.qualification-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 28px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00a3ff;
+  box-shadow: 0 0 12px rgba(0, 163, 255, 0.7);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.qualification-item:hover {
+  transform: translateX(10px);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 163, 255, 0.08),
+    rgba(2, 6, 23, 0.6)
+  );
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
+}
+
+.qualification-item:hover::before {
+  transform: scale(1.4);
+  box-shadow: 0 0 22px rgba(0, 255, 255, 0.9);
+}
+
+/* ============================= */
+/* Text Styling */
+/* ============================= */
+.qualification-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #00a3ff;
+  text-shadow: 0 0 6px rgba(0, 163, 255, 0.5);
+}
+
+.qualification-item p {
+  margin: 4px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(204, 204, 204, 0.85);
+}
+
+.qualification-item p span {
+  color: #00ffff;
+  font-weight: 500;
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+@media (max-width: 1024px) {
+  .qualification-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .qualification-section {
+    padding: 40px 6%;
+  }
+
+  .qualification-container h2 {
+    font-size: 2rem;
+  }
+
+  .qualification-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .qualification-container {
+    padding: 22px;
+  }
+
+  .qualification-item {
+    padding: 20px 18px 20px 28px;
+  }
+
+  .qualification-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .qualification-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================= */
+/* Motion Accessibility */
+/* ============================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
