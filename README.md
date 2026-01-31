@@ -6,8 +6,7 @@ Welcome to my **GitHub Portfolio**, a modern single-page application built with 
 
 ## 🌐 Live Preview
 
-> **Demo:** *Coming Soon*
-> *(You can deploy this app on Vercel, Netlify, or GitHub Pages)*
+https://mishra-protfolio-mousam.netlify.app/
 
 ---
 
