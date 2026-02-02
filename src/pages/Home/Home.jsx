@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profileImage from "../../assets/mousam.png"; 
 import "./Home.css";
 import cvFile from "../../assets/MyCv.pdf";
@@ -42,7 +42,6 @@ const Home = () => {
         <div className="social-links">
           <a href="https://github.com/" target="_blank" rel="noreferrer"><FaGithub /></a>
           <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-          <a href="https://twitter.com/" target="_blank" rel="noreferrer"><FaTwitter /></a>
         </div>
 
         <div className="buttons">

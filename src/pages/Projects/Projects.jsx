@@ -55,9 +55,9 @@ const Projects = () => {
               <a href={project.github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
-              <a href={project.live} target="_blank" rel="noopener noreferrer">
+              {/* <a href={project.live} target="_blank" rel="noopener noreferrer">
                 See Live
-              </a>
+              </a> */}
             </div>
           </div>
         ))}

@@ -1,17 +1,22 @@
 import React from "react";
 import aboutImg from "../../assets/mousam.png";
 import cvFile from "../../assets/MyCv.pdf";
-import "./About.css"
-
+import "./About.css";
 
 const About = () => {
   return (
     <section className="about section" id="about">
-      <h2 className="section__title">About Me</h2>
-
       <div className="about__container container grid">
+        
+        {/* Title - full width, top */}
+        <div className="section__title">
+          <h2>About Me</h2>
+        </div>
+
+        {/* Image */}
         <img src={aboutImg} alt="About" className="about__img" />
 
+        {/* Content */}
         <div className="about__data">
           <p className="about__description">
             I am a <strong>final-year Computer Science Engineering student</strong>{" "}
@@ -57,6 +62,7 @@ const About = () => {
             </a>
           </div>
         </div>
+
       </div>
     </section>
   );
